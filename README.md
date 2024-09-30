@@ -2,18 +2,17 @@
 
 # User Registration Form with SQLite Backend
 
-## Description
+## DESCRIPTION
 This project is a simple web application that allows users to register by submitting their name and address details. The data is stored in a SQLite database using Node.js as the backend. The project demonstrates the use of Express.js for routing, HTML/CSS for frontend, and SQLite for database management.
 
-## Table of Contents
+## TABLE OF CONTENTS
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
-- [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+## INSTALLATION
 
 1. Clone the repository:
    ```bash
@@ -38,7 +37,7 @@ Start the server:
 node server.js
 Open your browser and go to http://localhost:3000.
 
-Usage
+USAGE
 
 Fill in the user registration form by providing a name and address.
 
@@ -46,18 +45,24 @@ Submit the form to store the details in the SQLite database.
 
 On submission, a message will display indicating success.
 
-Technologies Used
+TECHNOLOGIES USED
+
 Node.js
 Express.js
 SQLite
 HTML/CSS for frontend
 JavaScript for client-side validation
 
-Features
+FEATURES
+
 User registration with name and address.
 Data persistence using SQLite.
 Simple form validation.
 Responsive design for mobile and desktop.
+
+LICENSE
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 License
