@@ -1,0 +1,90 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Background for the form container */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for the page */
+}
+
+/* Container for the form */
+.container {
+    max-width: 400px;
+    width: 100%; /* Full width on small screens */
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Slightly larger font size */
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for button effects */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

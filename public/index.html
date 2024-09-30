@@ -4,137 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ecf0f1;
-            background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/darkemboss.png'); /* Subtle pattern */
-            color: #34495e;
-        }
-
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-top: 30px;
-            font-size: 2.5em;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        form {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            margin: 30px auto;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        form:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-            color: #34495e;
-            font-size: 1.1em;
-        }
-
-        input[type="text"] {
-            width: calc(100% - 20px);
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 2px solid #bdc3c7;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        input[type="text"]:focus {
-            border-color: #3498db;
-            outline: none;
-            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(90deg, #3498db, #2980b9);
-            border: none;
-            color: white;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        button:hover {
-            background: linear-gradient(90deg, #2980b9, #1c6693);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        #result {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            font-weight: bold;
-            color: #2c3e50;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        #result:hover {
-            transform: translateY(-3px);
-            background-color: #d5dbdb;
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 480px) {
-            form {
-                width: 90%;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            button {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file for styling -->
 </head>
 <body>
-    <h1>User Registration</h1>
-    <form id="userForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="background">
+        <div class="container">
+            <h1>User Registration</h1>
+            <form id="userForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-        <label for="street">Street:</label>
-        <input type="text" id="street" name="street" required>
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
 
-        <label for="state">State:</label>
-        <input type="text" id="state" name="state" required>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
 
-        <label for="zip">Zip Code:</label>
-        <input type="text" id="zip" name="zip" required>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
 
-        <button type="submit">Submit</button>
-    </form>
-
-    <div id="result"></div> <!-- Div to display the result -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         document.getElementById('userForm').addEventListener('submit', async (e) => {
@@ -153,10 +48,7 @@
             });
 
             const result = await response.json();
-
-            // Display the output as "Name: <name>, Address: <street>, <city>, <state>, <zip>"
-            document.getElementById('result').innerText = 
-                `Name: ${result.user.name}, Address: ${result.address.street}, ${result.address.city}, ${result.address.state}, ${result.address.zip}`;
+            alert(result.message);
         });
     </script>
 </body>
